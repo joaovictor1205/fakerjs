@@ -5,7 +5,7 @@ function generateUsers(){
     
     let users = []
 
-    for(let id = 0; id <= 100; id++){
+    for(let id = 0; id <= 500; id++){
 
         let firstName = faker.name.firstName();
         let lastName = faker.name.lastName();
@@ -31,3 +31,5 @@ function generateUsers(){
 let dataObj = generateUsers();
 
 fs.writeFileSync('data.json', JSON.stringify(dataObj, null, '\t'));
+
+//json-server --watch data.json --port 8080
